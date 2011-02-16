@@ -1,0 +1,23 @@
+This script imports m3 format files to Blender 2.49.
+
+The m3 file format, used by Blizzard in several games, is based around the mdx and m2 file format.  Thanks to the efforts of Volcore, madyavic and the people working on libm3, the file format has been reversed engineered enough to make this script possible (Thanks guys!).
+
+This script currently imports the following:
+ - Geometry data (vertices, faces, submeshes [in vertex groups])
+ - Model Textures (currently only the first material is supported)
+   
+   Blender supports the DDS file format and needs the image in the same
+   directory.  This script will notify you of any missing textures.
+
+ - Bone Data (no animations yet)
+
+ TODO:
+ - Documentation & clean up
+ - Adjust vertices to bind pose (import IREF matrices)
+ - Import Animation data
+
+ Usage:
+	Execute this script from the "File->Import" menu and choose a m3 file to open.
+
+ Notes:
+	Generates the standard verts and faces lists.
