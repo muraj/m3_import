@@ -18,12 +18,12 @@
 
 # <pep8 compliant>
 
-bl_addon_info = {
+bl_info = {
     'name': 'Blizzard M3 format',
     'author': 'Cory Perry',
-    'version': (0, 2, 0),
+    'version': (0, 2, 1),
     'blender': (2, 5, 6),
-    'api': 34076,
+    'api': 34893,
     'location': 'File > Import-Export',
     'description': 'This script imports the Blizzard M3 format (.m3)',
     'warning': '',
@@ -46,7 +46,7 @@ if "bpy" in locals():
 import time
 import datetime
 import bpy
-from bpy.props import *
+from bpy.props import StringProperty, BoolProperty
 from io_utils import ImportHelper, ExportHelper
 
 
@@ -82,11 +82,13 @@ def menu_func_import(self, context):
 
 
 def register():
+    bpy.utils.register_module(__name__)
     bpy.types.INFO_MT_file_import.append(menu_func_import)
 #   bpy.types.INFO_MT_file_export.append(menu_func_export)
 
 
 def unregister():
+    bpy.utils.unregister_module(__name__)
     bpy.types.INFO_MT_file_import.remove(menu_func_import)
 #   bpy.types.INFO_MT_file_export.remove(menu_func_export)
 

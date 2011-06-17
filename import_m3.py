@@ -17,7 +17,7 @@
 # ##### END GPL LICENSE BLOCK #####
 
 __author__ = "Cory Perry (muraj)"
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __bpydoc__ = """\
 This script imports m3 format files to Blender.
 
